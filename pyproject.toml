@@ -1,0 +1,38 @@
+[build-system]
+requires = ['setuptools', 'setuptools-scm']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'ChaProEV runs'
+version = '0.0.1'
+authors = [
+  { name='Omar Usmani', email='Omar.Usmani@TNO.nl' },
+]
+description = 'ChaProEV: Charging Profiles of Electric Vehicles'
+readme = 'README.md'
+requires-python = '>=3.11'
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: OS Independent',
+]
+dynamic = ['dependencies']
+[tool.setuptools.dynamic]
+dependencies = {file = ['requirements.txt']}
+
+[tool.setuptools.package-data]
+'ETS_CookBook' = ['py.typed']
+
+[tool.setuptools.packages.find]
+where = ['src']
+
+[tool.pytest.ini_options]
+pythonpath = ['src/ChaProEV_runs']
+
+[project.urls]
+'Homepage' = 'https://github.com/TNO/ChaProEV_runs'
+
+[[tool.mypy.overrides]]
+module = ['geopandas/*', 'plotly/*', 'tomllib/*', 'tomli/*', 'cdsapi/*']
+ignore_missing_imports = true
+
