@@ -1,0 +1,4 @@
+Variant name,,legs.bus_from_route_start_to_depot.duration,legs.bus_from_route_start_to_depot.distance
+Netherlands_urban_bus,,0.2,5
+Netherlands_semiurban_bus,,0.22,7.5
+Netherlands_rural_bus,,0.23,10
