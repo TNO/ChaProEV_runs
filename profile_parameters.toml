@@ -1,0 +1,26 @@
+
+tables_to_get = [
+    'charge_drawn_from_network',
+    'next_leg_charge_from_network',
+    'connectivity_per_location',
+    'maximal_delivered_power_per_location'
+]
+quantity_names = [
+    'Reference charge drawen from network (kWh)',
+    'Demand for next leg (kWh) (fom network)',
+    'Connected vehicles (%)',
+    'Connected power from network (kW)'
+
+
+]
+index_is_expanded = [
+    true, 
+    false,
+    false,
+    false,
+]
+
+base_index = ['Time Tag']
+expanded_index = ['Time Tag', 'Hour number', 'SPINE hour number']
+
+# V2G power per location how much the car gives, X percent that goes to network
