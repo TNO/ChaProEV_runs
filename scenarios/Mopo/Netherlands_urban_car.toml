@@ -79,6 +79,8 @@ longitude = 6.2
 base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
+vehicle_discharge_power = 4.2
+proportion_of_discharge_going_to_network = 0.9
 
 [locations.work]
 vehicle = "car"
@@ -90,6 +92,8 @@ longitude = 5.8
 base_charging_price = 0
 charging_desirability = 1
 percentage_in_location_at_run_start = 0
+vehicle_discharge_power = 6.6
+proportion_of_discharge_going_to_network = 0.9
 
 [locations.leisure]
 vehicle = "car"
@@ -101,6 +105,8 @@ longitude = 6.2
 base_charging_price = 0.35
 charging_desirability = 0.25
 percentage_in_location_at_run_start = 0
+vehicle_discharge_power = 0
+proportion_of_discharge_going_to_network = 0.9
 
 [locations.weekend]
 vehicle = "car"
@@ -112,6 +118,8 @@ longitude = 6.2
 base_charging_price = 0.35
 charging_desirability = 0.1
 percentage_in_location_at_run_start = 0
+vehicle_discharge_power = 0
+proportion_of_discharge_going_to_network = 0.9
 
 [locations.holiday]
 vehicle = "car"
@@ -123,6 +131,8 @@ longitude = 6.2
 base_charging_price = 0.35
 charging_desirability = 0.2
 percentage_in_location_at_run_start = 0
+vehicle_discharge_power = 11
+proportion_of_discharge_going_to_network = 0.9
 
 [legs.go_to_work]
 vehicle = "car"

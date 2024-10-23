@@ -6,6 +6,7 @@ use_day_types_in_charge_computing = true
 [vehicle]
 name = "bus"
 base_location = "bus_depot"
+yearly_kilometrage = 42000
 kilometers_column_for_consumption = "Arrivals"
 use_weighted = false
 battery_capacity = 80
@@ -80,6 +81,8 @@ longitude = 6.2
 base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
+vehicle_discharge_power = 400
+proportion_of_discharge_going_to_network = 0.9
 
 [locations.bus_route_start]
 vehicle = "bus"
@@ -91,6 +94,8 @@ longitude = 6.2
 base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
+vehicle_discharge_power = 0
+proportion_of_discharge_going_to_network = 0.9
 
 [locations.bus_route_end]
 vehicle = "bus"
@@ -102,6 +107,8 @@ longitude = 6.2
 base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
+vehicle_discharge_power = 0
+proportion_of_discharge_going_to_network = 0.9
 
 [legs.bus_from_depot_to_route_start]
 vehicle = "bus"

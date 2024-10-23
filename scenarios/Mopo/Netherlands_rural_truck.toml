@@ -79,6 +79,8 @@ longitude = 6.2
 base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
+vehicle_discharge_power = 150
+proportion_of_discharge_going_to_network = 0.9
 
 [locations.truck_customer]
 vehicle = "truck"
@@ -90,6 +92,8 @@ longitude = 6.2
 base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
+vehicle_discharge_power = 0
+proportion_of_discharge_going_to_network = 0.9
 
 [legs.truck_to_customer]
 vehicle = "truck"

@@ -1,3 +1,4 @@
+import os
 import typing as ty
 
 import numpy as np
@@ -6,7 +7,44 @@ from ChaProEV import ChaProEV, run_time
 from ETS_CookBook import ETS_CookBook as cook
 
 
-def create_profile_dataframe(
+def create_profile_dataframes(
+    case_name: str, profile_parameters: ty.Dict, general_parameters: ty.Dict
+) -> None:
+    profiles_groupfile_root: str = profile_parameters[
+        'profiles_groupfile_root'
+    ]
+    file_parameters: ty.Dict = general_parameters['files']
+    output_root: str = file_parameters['output_root']
+
+    for scenario_file in os.listdir(f'scenarios/{case_name}'):
+        # To avoid issues if some files are not configuration files
+        if scenario_file.split('.')[1] == 'toml':
+            scenario_file_name: str = f'scenarios/{case_name}/{scenario_file}'
+            scenario: ty.Dict = cook.parameters_from_TOML(scenario_file_name)
+            scenario['scenario_name'] = scenario_file.split('.')[0]
+            scenario_name = scenario['scenario_name']
+
+            scenario_profile_dataframe: pd.DataFrame = (
+                create_scenario_profile_dataframe(
+                    profile_parameters,
+                    scenario,
+                    general_parameters,
+                    scenario_name,
+                    case_name,
+                )
+            )
+
+            cook.save_dataframe(
+                scenario_profile_dataframe,
+                f'{scenario_name}_profile',
+                profiles_groupfile_root,
+                f'{output_root}/{case_name}',
+                general_parameters,
+            )
+            print(scenario_name)
+
+
+def create_scenario_profile_dataframe(
     profile_parameters: ty.Dict,
     scenario: ty.Dict,
     general_parameters: ty.Dict,
@@ -31,8 +69,6 @@ def create_profile_dataframe(
     base_index: ty.List[str] = profile_parameters['base_index']
     expanded_index: ty.List[str] = profile_parameters['expanded_index']
 
-    print(source_dataframe_path)
-
     for table_to_get, quantity_name, table_index_is_expanded in zip(
         tables_to_get, quantity_names, index_is_expanded
     ):
@@ -55,13 +91,9 @@ def create_profile_dataframe(
 
 if __name__ == '__main__':
     case_name = 'Mopo'
-    scenario_name = 'Netherlands_urban_car'
     general_parameters_file_name: str = 'ChaProEV.toml'
     profile_parameters_file_name: str = 'profile_parameters.toml'
 
-    scenario: ty.Dict = cook.parameters_from_TOML(
-        f'scenarios/{case_name}/{scenario_name}.toml'
-    )
     general_parameters: ty.Dict = cook.parameters_from_TOML(
         f'{general_parameters_file_name}'
     )
@@ -71,11 +103,7 @@ if __name__ == '__main__':
     )
     ChaProEV.run_ChaProEV(case_name)
 
-    profile: pd.DataFrame = create_profile_dataframe(
-        profile_parameters,
-        scenario,
-        general_parameters,
-        scenario_name,
-        case_name,
+    general_parameters['files']['dataframe_outputs']['excel'] = True
+    create_profile_dataframes(
+        case_name, profile_parameters, general_parameters
     )
-    print(profile)
