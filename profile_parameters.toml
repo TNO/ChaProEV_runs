@@ -9,7 +9,7 @@ tables_to_get = [
     'discharge_power_to_network_per_location',
 ]
 quantity_names = [
-    'Reference charge drawen from network (kWh)',
+    'Reference charge drawn from network (kWh)',
     'Demand for next leg (kWh) (fom network)',
     'Connected vehicles (%)',
     'Connected Power from Network (kW)',
