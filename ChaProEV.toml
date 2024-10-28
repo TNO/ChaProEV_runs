@@ -3,6 +3,11 @@
 use_variants = true
 csv_version = true
 
+[parallel_processing]
+[parallel_processing.number_of_parallel_processes]
+for_scenarios = 6
+for_pickle_saves = 6
+
 
 # Parameters for plots (colors, sizes, etc.)
 [plots]
@@ -52,7 +57,7 @@ feather = false
 parquet = false
 stata = false
 pickle = true
-sql = true
+sql = false
 
 [maps]
 map_data_folder = 'input/map_data'

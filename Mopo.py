@@ -103,7 +103,7 @@ if __name__ == '__main__':
     )
     ChaProEV.run_ChaProEV(case_name)
 
-    general_parameters['files']['dataframe_outputs']['excel'] = True
+    # general_parameters['files']['dataframe_outputs']['excel'] = True
     create_profile_dataframes(
         case_name, profile_parameters, general_parameters
     )
