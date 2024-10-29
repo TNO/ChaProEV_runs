@@ -1,13 +1,27 @@
 
 [variants]
-use_variants = true
+use_variants = false
 csv_version = true
 
 [parallel_processing]
 [parallel_processing.number_of_parallel_processes]
-for_scenarios = 6
-for_pickle_saves = 6
+for_scenarios = 4
+for_pickle_saves = 4
 
+[interim_files]
+pickle = false
+
+[profile_dataframe]
+headers = [
+    'Reference charge drawn from network (kWh)',
+    'Demand for next leg (kWh) (fom network)',
+    'Connected vehicles (%)',
+    'Connected Power from Network (kW)',
+    'Connected Power to Vehicles (kW)',
+    'Vehicle Discharge Power (kW)',
+    'Discharge Power to Network (kW)',
+
+]
 
 # Parameters for plots (colors, sizes, etc.)
 [plots]
@@ -57,7 +71,7 @@ feather = false
 parquet = false
 stata = false
 pickle = true
-sql = false
+sql = true
 
 [maps]
 map_data_folder = 'input/map_data'
