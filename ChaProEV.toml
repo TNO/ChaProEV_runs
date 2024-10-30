@@ -1,6 +1,6 @@
 
 [variants]
-use_variants = false
+use_variants = true
 csv_version = true
 
 [parallel_processing]
