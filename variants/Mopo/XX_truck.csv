@@ -1,4 +1,7 @@
 Variant name,legs.truck_to_hub.duration,legs.truck_to_hub.distance
-Netherlands_urban_truck,2,130
-Netherlands_semiurban_truck,1.8,140
-Netherlands_rural_truck,1.7,150
+Netherlands_urban_truck_2030,2,130
+Netherlands_semiurban_truck_2030,1.8,140
+Netherlands_rural_truck_2030,1.7,150
+Netherlands_urban_truck_2050,2,130
+Netherlands_semiurban_truck_2050,1.8,140
+Netherlands_rural_truck_2050,1.7,150

@@ -1,4 +1,7 @@
 Variant name,legs.van_to_customer.duration,legs.van_to_customer.distance
-Netherlands_urban_van,0.2,15
-Netherlands_semiurban_van,0.22,20
-Netherlands_rural_van,0.25,25
+Netherlands_urban_van_2030,0.2,15
+Netherlands_semiurban_van_2030,0.22,20
+Netherlands_rural_van_2030,0.25,25
+Netherlands_urban_van_2050,0.2,15
+Netherlands_semiurban_van_2050,0.22,20
+Netherlands_rural_van_2050,0.25,25
