@@ -47,20 +47,38 @@ weather_factors_table_root_name = "weather_factors"
 [charging]
 
 [run.start]
-year = 2020
-month = 1
-day = 1
+year = 2017
+month = 12
+day = 31
 hour = 5
 minute = 0
 
 [run.end]
-year = 2021
+year = 2019
+month = 1
+day = 1
+hour = 0
+minute = 0
+
+[run.display_start]
+year = 2018
+month = 1
+day = 1
+hour = 0
+minute = 0
+
+[run.display_end]
+year = 2019
 month = 1
 day = 1
 hour = 0
 minute = 0
 
 [run.frequency]
+size = 1
+type = "h"
+
+[run.display_frequency]
 size = 1
 type = "h"
 
