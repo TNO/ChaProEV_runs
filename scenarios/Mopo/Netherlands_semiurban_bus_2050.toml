@@ -100,7 +100,7 @@ base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 400
-proportion_of_discharge_going_to_network = 0.9
+proportion_of_discharge_to_network = 0.9
 
 [locations.bus_route_start]
 vehicle = "bus"
@@ -113,7 +113,7 @@ base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 0
-proportion_of_discharge_going_to_network = 0.9
+proportion_of_discharge_to_network = 0.9
 
 [locations.bus_route_end]
 vehicle = "bus"
@@ -126,7 +126,7 @@ base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 0
-proportion_of_discharge_going_to_network = 0.9
+proportion_of_discharge_to_network = 0.9
 
 [legs.bus_from_depot_to_route_start]
 vehicle = "bus"

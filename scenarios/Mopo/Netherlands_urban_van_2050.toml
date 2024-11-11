@@ -98,7 +98,7 @@ base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 100
-proportion_of_discharge_going_to_network = 0.9
+proportion_of_discharge_to_network = 0.9
 
 [locations.van_customer]
 vehicle = "van"
@@ -111,7 +111,7 @@ base_charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 0
-proportion_of_discharge_going_to_network = 0.9
+proportion_of_discharge_to_network = 0.9
 
 [legs.van_to_customer]
 vehicle = "van"

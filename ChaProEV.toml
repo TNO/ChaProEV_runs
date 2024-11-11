@@ -5,10 +5,9 @@ csv_version = true
 use_years_in_profiles =  true
 
 [parallel_processing]
-[parallel_processing.number_of_parallel_processes]
 set_amount_of_processes = false
-for_scenarios = 4
-for_pickle_saves = 4
+amount_for_scenarios = 4
+amount_for_pickle_saves = 4
 
 [interim_files]
 pickle = false
