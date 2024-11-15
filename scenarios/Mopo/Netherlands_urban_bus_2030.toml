@@ -48,6 +48,9 @@ weather_factors_table_root_name = "weather_factors"
 
 [charging]
 
+[charging_sessions]
+resolution = 1
+
 [run.start]
 year = 2017
 month = 12

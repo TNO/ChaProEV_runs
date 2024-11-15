@@ -434,4 +434,7 @@ fitting_polynomial_order = 6
 
 [charging]
 
+[charging_sessions]
+resolution = 1 # subdivisions from main unit of time
+
 
