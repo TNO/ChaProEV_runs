@@ -70,7 +70,7 @@ charging_power = 8.9  # kW
 charger_efficiency = 0.8
 latitude = 52
 longitude = 6.2
-base_charging_price = 0.25  # €/kWh
+charging_price = 0.25  # €/kWh
 charging_desirability = 1
 # An indicator (0-1) of how much people like to charge at this location
 percentage_in_location_at_run_start = 1
@@ -78,6 +78,11 @@ percentage_in_location_at_run_start = 1
 # compute_start_location_split in mobility_module below)
 vehicle_discharge_power = 4.2 # kW
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+] # Starts at midinight
 [locations.work]
 vehicle = 'car'
 connectivity = 0.25
@@ -85,7 +90,7 @@ charging_power = 11  # kW
 charger_efficiency = 0.8
 latitude = 52.1
 longitude = 5.8
-base_charging_price = 0  # €/kWh
+charging_price = 0  # €/kWh
 charging_desirability = 1
 # An indicator (0-1) of how much people like to charge at this location
 percentage_in_location_at_run_start = 0
@@ -93,6 +98,11 @@ percentage_in_location_at_run_start = 0
 # compute_start_location_split in mobility_module below)
 vehicle_discharge_power = 6.6 # kW
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+] # Starts at midinight
 [locations.leisure]
 vehicle = 'car'
 connectivity = 0.25
@@ -100,7 +110,7 @@ charging_power = 22  # kW
 charger_efficiency = 0.85
 latitude = 52.1
 longitude = 6.2
-base_charging_price = 0.35  # €/kWh
+charging_price = 0.35  # €/kWh
 charging_desirability = 0.25
 # An indicator (0-1) of how much people like to charge at this location
 percentage_in_location_at_run_start = 0
@@ -108,6 +118,11 @@ percentage_in_location_at_run_start = 0
 # compute_start_location_split in mobility_module below)
 vehicle_discharge_power = 0 # kW
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+] # Starts at midinight
 [locations.weekend]
 vehicle = 'car'
 connectivity = 0.1
@@ -115,7 +130,7 @@ charging_power = 22  # kW
 charger_efficiency = 0.85
 latitude = 51.8
 longitude = 6.2
-base_charging_price = 0.35  # €/kWh
+charging_price = 0.35  # €/kWh
 charging_desirability = 0.1
 # An indicator (0-1) of how much people like to charge at this location
 percentage_in_location_at_run_start = 0
@@ -123,6 +138,11 @@ percentage_in_location_at_run_start = 0
 # compute_start_location_split in mobility_module below)
 vehicle_discharge_power = 0 # kW
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+] # Starts at midinight
 [locations.holiday]
 vehicle = 'car'
 connectivity = 1
@@ -130,7 +150,7 @@ charging_power = 22  # kW
 charger_efficiency = 0.85
 latitude = 53.0
 longitude = 6.2
-base_charging_price = 0.35  # €/kWh
+charging_price = 0.35  # €/kWh
 charging_desirability = 0.2
 # An indicator (0-1) of how much people like to charge at this location
 percentage_in_location_at_run_start = 0
@@ -138,6 +158,11 @@ percentage_in_location_at_run_start = 0
 # compute_start_location_split in mobility_module below)
 vehicle_discharge_power = 11 # kW
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+] # Starts at midinight
 
 [legs]
 # You can add legs here by copying existing legs,
@@ -715,6 +740,8 @@ fitting_polynomial_order = 6
 
 
 [charging]
+price_reaction_exponent =  0 
+desirability_reaction_exponent = 0 
 
 [charging_sessions]
 resolution = 1 # subdivisions from main unit of time

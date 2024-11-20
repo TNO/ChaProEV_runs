@@ -1,4 +1,4 @@
-Variant name,Total Fleet (thousands),electricity proportion,gasoline proportion,diesel proportion,hydrogen proportion
+Scenario,Total Fleet (thousands),electricity proportion,gasoline proportion,diesel proportion,hydrogen proportion
 Netherlands_urban_car_2030,1000,0.4,0.6,0,0
 Netherlands_semiurban_car_2030,2000,0.3,0.7,0,0
 Netherlands_rural_car_2030,3000,0.2,0.8,0,0

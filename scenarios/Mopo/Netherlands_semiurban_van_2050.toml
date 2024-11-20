@@ -45,6 +45,8 @@ weights = [ 0.66, 1.6,]
 weather_factors_table_root_name = "weather_factors"
 
 [charging]
+price_reaction_exponent = 0
+desirability_reaction_exponent = 0
 
 [charging_sessions]
 resolution = 1
@@ -97,11 +99,12 @@ charging_power = 200
 charger_efficiency = 0.89
 latitude = 52
 longitude = 6.2
-base_charging_price = 0.25
+charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 100
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
 [locations.van_customer]
 vehicle = "van"
@@ -110,11 +113,12 @@ charging_power = 200
 charger_efficiency = 0.87
 latitude = 52
 longitude = 6.2
-base_charging_price = 0.25
+charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 0
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
 [legs.van_to_customer]
 vehicle = "van"

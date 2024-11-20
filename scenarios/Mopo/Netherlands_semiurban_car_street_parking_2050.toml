@@ -45,6 +45,8 @@ weights = [ 0.66, 1.6,]
 weather_factors_table_root_name = "weather_factors"
 
 [charging]
+price_reaction_exponent = 0
+desirability_reaction_exponent = 0
 
 [charging_sessions]
 resolution = 1
@@ -97,11 +99,12 @@ charging_power = 16.02
 charger_efficiency = 0.8
 latitude = 52
 longitude = 6.2
-base_charging_price = 0.25
+charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
 vehicle_discharge_power = 4.2
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
 [locations.work]
 vehicle = "car"
@@ -110,11 +113,12 @@ charging_power = 11
 charger_efficiency = 0.8
 latitude = 52.1
 longitude = 5.8
-base_charging_price = 0
+charging_price = 0
 charging_desirability = 1
 percentage_in_location_at_run_start = 0
 vehicle_discharge_power = 6.6
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
 [locations.leisure]
 vehicle = "car"
@@ -123,11 +127,12 @@ charging_power = 22
 charger_efficiency = 0.85
 latitude = 52.1
 longitude = 6.2
-base_charging_price = 0.35
+charging_price = 0.35
 charging_desirability = 0.25
 percentage_in_location_at_run_start = 0
 vehicle_discharge_power = 0
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
 [locations.weekend]
 vehicle = "car"
@@ -136,11 +141,12 @@ charging_power = 22
 charger_efficiency = 0.85
 latitude = 51.8
 longitude = 6.2
-base_charging_price = 0.35
+charging_price = 0.35
 charging_desirability = 0.1
 percentage_in_location_at_run_start = 0
 vehicle_discharge_power = 0
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
 [locations.holiday]
 vehicle = "car"
@@ -149,11 +155,12 @@ charging_power = 22
 charger_efficiency = 0.85
 latitude = 53.0
 longitude = 6.2
-base_charging_price = 0.35
+charging_price = 0.35
 charging_desirability = 0.2
 percentage_in_location_at_run_start = 0
 vehicle_discharge_power = 11
 proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
 [legs.go_to_work]
 vehicle = "car"
