@@ -1,0 +1,74 @@
+charger efficiencies 
+- 85 % for AC above 10kW, 80% for home chargers in 2030, 92% in the long term (2050, so 89% in 2040), 87% and 84% for home chargers (similar growth)
+THINGVAD2019826
+8231947
+- 90% for DC (https://insideevs.com/features/711659/ev-charger-efficiency-losses/) in 2030 (97% in 2050 and 94% in 2040, follwoing the increase above)
+- Also used 22 kW for public AC charges, and 7.4 kW at home
+https://evbox.com/en/ev-chargers/businessline has 7.44 kW, 11kW, 22kW outputs
+Took the 7.4 kW for home (own driveway)
+22 kW for public AC chargers in the long temr (2050), 50% mix 11/22 in 2030 (-->16.5 kW) ad 75% 22 kW in 2040: 18.33 kW
+Also assumed discharge power/efficiency same as charging (other models then decide which percentage can discharge/have discharge capacbilities)
+
+
+coonectivity of cars = 1 for home and holiday
+
+0.25, 0.5, 0.75 in 2030, 2040, 2050 for work and leisure half that for weekend
+
+350 kW for DC chargers (alll bus and truck chargers)
+
+22 kW for vans
+
+bus connectivity is always 1
+
+truck connectivity 1 at home and 0.25/0.50/0.75 at customer (as connectivity expands) same for van
+
+
+
+@article{THINGVAD2019826,
+title = {Economic value of electric vehicle reserve provision in the Nordic countries under driving requirements and charger losses},
+journal = {Journal of Energy Storage},
+volume = {21},
+pages = {826-834},
+year = {2019},
+issn = {2352-152X},
+doi = {https://doi.org/10.1016/j.est.2018.12.018},
+url = {https://www.sciencedirect.com/science/article/pii/S2352152X18307254},
+author = {Andreas Thingvad and Charalampos Ziras and Mattia Marinelli},
+keywords = {Ancillary services, Battery degradation, Electric vehicles, Frequency control, Vehicle-to-Grid},
+abstract = {Electric vehicles can be used for delivering primary frequency control (PFC) and the revenue can compensate for the costs of driving. However, the average system frequency can be biased over the hour, which can lead storage units performing PFC to become either fully charged or depleted. This is also called the energy content of the frequency. Another important role is played by the V2G charger efficiency, which negatively affects the service energy flow. In this paper, the characterisation of the charger and the influence of the losses are detailed. Real frequency and market data are used for calculating the revenue under the Nordic regulatory framework. Earnings are calculated for the best case where the future energy content is known in advance. The results show that, in order to fulfill the service delivery specifications, a crucial role is played by the bid power compared to the size of the energy storage. Recommendations are given in order not to fail regulatory requirements along with considerations on the influence of service provision on the degradation.}
+}
+@INPROCEEDINGS{8231947,
+  author={Thingvad, Andreas and Ziras, Charalampos and Hu, Junjie and Marinelli, Mattia},
+  booktitle={2017 52nd International Universities Power Engineering Conference (UPEC)}, 
+  title={Assessing the energy content of system frequency and electric vehicle charging efficiency for ancillary service provision}, 
+  year={2017},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Frequency conversion;Frequency control;Batteries;Power measurement;Time-frequency analysis;Ancillary Services;Electric Vehicles;Frequency Control;Vehicle-to-Grid},
+  doi={10.1109/UPEC.2017.8231947}}
+
+
+for cars, ee Excel
+Also shifted day start hour by one for countries east of Germany
+
+  legs 
+  distance
+  duration
+
+  vehicle
+  yearly_kilometrage \(is it used?)
+  battry_cpacity (is it used?)
+
+  [vehicle.base_consumption_per_km]
+electricity_kWh = 0.2
+gasoline_litres = 0.075
+diesel_litres = 0.05
+hydrogen_kg = 0.006340
+
+trips
+
+times and amounts and such?
+
+hours_worked_per_work_week
+worked_hours_per_year

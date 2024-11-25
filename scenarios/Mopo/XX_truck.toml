@@ -6,8 +6,9 @@
 # required.
 
 
-
 # Run parameters
+# For the Mopo case study, we want to use 2018 as a calendar year
+# and a one-hour frequency.
 [run]
 use_day_types_in_charge_computing = true
 [run.start]
@@ -66,8 +67,8 @@ download_EV_tool_data = false
 [locations.truck_hub]
 vehicle = 'truck'
 connectivity = 1
-charging_power = 200  # kW
-charger_efficiency = 0.89
+charging_power = 350  # kW
+charger_efficiency = 0.90
 latitude = 52
 longitude = 6.2
 charging_price = 0.25  # €/kWh
@@ -76,7 +77,7 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 1
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 150 # kW
+vehicle_discharge_power = 350 # kW
 proportion_of_discharge_to_network = 0.9
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -85,9 +86,9 @@ time_modulation_factors = [
 ] # Starts at midinight
 [locations.truck_customer]
 vehicle = 'truck'
-connectivity = 0.1
-charging_power = 200  # kW
-charger_efficiency = 0.87
+connectivity = 0.25
+charging_power = 350  # kW
+charger_efficiency = 0.9
 latitude = 52
 longitude = 6.2
 charging_price = 0.25  # €/kWh
@@ -96,7 +97,7 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 1
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 0 # kW
+vehicle_discharge_power = 350 # kW
 proportion_of_discharge_to_network = 0.9
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -113,8 +114,8 @@ time_modulation_factors = [
 # etc.
 [legs.truck_to_customer]
 vehicle = 'truck'
-distance = 150  # km
-duration = 2.2  # hours
+distance = 42  # km # To get to about 91_000 km per year
+duration = 1  # hours
 # This factor adds a correction to the vehicle consumption that depends
 # on the hour in day (the first is for 00:00 to 00:59,
 # the last for 23:00 to 23:59). Note that these are actual hours,
@@ -139,8 +140,8 @@ end = 'truck_customer'
 mix = [0.8, 0.2]
 [legs.truck_to_hub]
 vehicle = 'truck'
-distance = 150  # km
-duration = 2.2  # hours
+distance = 42 # km # To get to about 91_000 km per year
+duration = 1  # hours
 # This factor adds a correction to the vehicle consumption that depends
 # on the hour in day (the first is for 00:00 to 00:59,
 # the last for 23:00 to 23:59). Note that these are actual hours,
@@ -164,22 +165,28 @@ end = 'truck_hub'
 # road_types = ['highway', 'city']
 mix = [0.8, 0.2]
 
+
 [vehicle]
 
 name = 'truck'
 base_location = 'truck_hub' # not relevant for cars
-yearly_kilometrage = 42_000
+yearly_kilometrage = 91_250
+# 250 km per day https://www.agendalaadinfrastructuur.nl/ondersteuning+gemeenten/documenten+en+links/documenten+in+bibliotheek/handlerdownloadfiles.ashx?idnv=2547592#:~:text=Op%20dit%20moment%20gebruikt%20een,dieselvrachtwagen%20(Mobilyze%2C%202023).
 # Not relevant for cars, as it is built bottom-up
 kilometers_column_for_consumption = 'Arrivals'
 use_weighted = false
-battery_capacity = 80  # kWh
+battery_capacity = 540  # kWh
+# https://www.volvotrucks.com/en-en/news-stories/press-releases/2022/jan/volvos-heavy-duty-electric-truck-is-put-to-the-test-excels-in-both-range-and-energy-efficiency.html
 solar_panel_size_kWp = 0  # kWp
 [vehicle.base_consumption_per_km]
-electricity_kWh = 0.2
-gasoline_litres = 0.075
-diesel_litres = 0.05
-hydrogen_kg = 0.006340
+electricity_kWh = 0.1451
+gasoline_litres = 0.0649
+diesel_litres = 0.0557
+hydrogen_kg = 0.0076
+CNG_kg = 0.0461
+LNG_kg = 0.0461
 
+ 
 [trips]
 
 [trips.truck_weekday]
@@ -228,6 +235,8 @@ repeated_sequence = [
     ]
 repetition_amounts = [2]
 time_between_repetitions = [1] #[1.5] # hours
+
+
 
 
 # These parameters are used for the ChaProEV mobility module

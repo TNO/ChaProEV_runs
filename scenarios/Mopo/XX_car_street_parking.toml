@@ -8,6 +8,8 @@
 
 
 # Run parameters
+# For the Mopo case study, we want to use 2018 as a calendar year
+# and a one-hour frequency.
 [run]
 use_day_types_in_charge_computing = true
 [run.start]
@@ -66,8 +68,8 @@ download_EV_tool_data = false
 [locations.home]
 vehicle = 'car'
 connectivity = 1
-charging_power = 16.02  # kW
-charger_efficiency = 0.8
+charging_power = 16.5  # kW
+charger_efficiency = 0.85
 latitude = 52
 longitude = 6.2
 charging_price = 0.25  # €/kWh
@@ -76,8 +78,8 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 1
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 4.2 # kW
-proportion_of_discharge_to_network = 0.9
+vehicle_discharge_power = 16.5 # kW
+proportion_of_discharge_to_network = 0.85
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -86,8 +88,8 @@ time_modulation_factors = [
 [locations.work]
 vehicle = 'car'
 connectivity = 0.25
-charging_power = 11  # kW
-charger_efficiency = 0.8
+charging_power = 16.5  # kW
+charger_efficiency = 0.85
 latitude = 52.1
 longitude = 5.8
 charging_price = 0  # €/kWh
@@ -96,8 +98,8 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 0
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 6.6 # kW
-proportion_of_discharge_to_network = 0.9
+vehicle_discharge_power = 16.5 # kW
+proportion_of_discharge_to_network = 0.85
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -125,7 +127,7 @@ time_modulation_factors = [
 ] # Starts at midinight
 [locations.weekend]
 vehicle = 'car'
-connectivity = 0.1
+connectivity = 0.125
 charging_power = 22  # kW
 charger_efficiency = 0.85
 latitude = 51.8
@@ -402,10 +404,13 @@ use_weighted = false
 battery_capacity = 80  # kWh
 solar_panel_size_kWp = 0  # kWp
 [vehicle.base_consumption_per_km]
-electricity_kWh = 0.2
-gasoline_litres = 0.075
-diesel_litres = 0.05
-hydrogen_kg = 0.006340
+# https://www.autoweek.nl/verbruiksmonitor/
+electricity_kWh = 0.1451
+gasoline_litres = 0.0649
+diesel_litres = 0.0557
+hydrogen_kg = 0.0076
+LPG_litres = 0.092
+CNG_kg = 0.0461
 
 [trips]
 [trips.commute_to_work]

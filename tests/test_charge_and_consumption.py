@@ -46,7 +46,7 @@ def test_charge_and_consumption() -> None:
         charge_drawn_by_vehicles_dataframe: pd.DataFrame = pd.read_pickle(
             f'output/{case_name}/{scenario}_charge_drawn_by_vehicles_total.pkl'
         )
-
+        
         charge_drawn_by_vehicles_dataframe_in_test = (
             charge_drawn_by_vehicles_dataframe.loc[test_range]
         )
