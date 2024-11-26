@@ -19,10 +19,13 @@ def copy_select_files(case_name: str) -> None:
             for desired_output_element in desired_output_elements
         ):
             if output_file.endswith('.csv'):
-                shutil.copy(
-                    f'output/{case_name}/{output_file}',
-                    select_output_folder,
-                )
+                if 'XX' not in output_file:
+                    if 'driveway' not in output_file:
+                        if 'street' not in output_file:
+                            shutil.copy(
+                                f'output/{case_name}/{output_file}',
+                                select_output_folder,
+                            )
 
 
 if __name__ == '__main__':
