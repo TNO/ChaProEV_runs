@@ -1,4 +1,4 @@
-Variant name,,locations.van_base.charger_efficiency,locations.van_customer.charger_efficiency,locations.van_base.proportion_of_discharge_to_network,locations.van_customer.proportion_of_discharge_to_network,locations.van_customer.connectivity,mobility_module.day_start_hour,run.start.hour,legs.truck_to_customer.distance,legs.truck_to_customer.duration,legs.truck_to_base.distance,legs.truck_to_base.duration
+Variant name,,locations.van_base.charger_efficiency,locations.van_customer.charger_efficiency,locations.van_base.proportion_of_discharge_to_network,locations.van_customer.proportion_of_discharge_to_network,locations.van_customer.connectivity,mobility_module.day_start_hour,run.start.hour,legs.van_to_customer.distance,legs.van_to_customer.duration,legs.van_to_base.distance,legs.van_to_base.duration
 Austria_van_2030,,0.85,0.85,0.85,0.85,0.25,5,5,2.311111111,0.222222222,2.311111111,0.222222222
 Belgium_van_2030,,0.85,0.85,0.85,0.85,0.25,5,5,2.696296296,0.259259259,2.696296296,0.259259259
 Bulgaria_van_2030,,0.85,0.85,0.85,0.85,0.25,4,4,2.503703704,0.240740741,2.503703704,0.240740741
