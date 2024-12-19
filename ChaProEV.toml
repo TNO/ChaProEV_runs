@@ -248,8 +248,8 @@ sessions_values_columns = [
 ]
 
 [sessions]
-produce = false
-generate_profiles = false
+produce = true
+generate_profiles = true
 [standard_profiles]
 produce = true
 
