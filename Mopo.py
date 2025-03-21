@@ -9,8 +9,10 @@ from ETS_CookBook import ETS_CookBook as cook
 
 def copy_select_files(case_name: str) -> None:
     desired_output_elements: ty.List[str] = [
-        'profile_fleet',
-        'weekly_consumption_table_fleet',
+        # 'profile_fleet',
+        # 'weekly_consumption_table_fleet',
+        'profile',
+        'weekly_consumption_table',
     ]
     select_output_folder: str = f'select_output/{case_name}/'
     cook.check_if_folder_exists(select_output_folder)
