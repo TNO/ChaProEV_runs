@@ -68,7 +68,7 @@ download_EV_tool_data = false
 [locations.bus_depot]
 vehicle = 'bus'
 connectivity = 1
-charging_power = 350  # kW
+charging_power = 315  # kW
 charger_efficiency = 0.9
 latitude = 52
 longitude = 6.2
@@ -78,7 +78,7 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 1
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 350 # kW
+vehicle_discharge_power = 388.8888889 # kW
 proportion_of_discharge_to_network = 0.9
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -88,27 +88,7 @@ time_modulation_factors = [
 [locations.bus_route_start]
 vehicle = 'bus'
 connectivity = 1
-charging_power = 350  # kW
-charger_efficiency = 0.89
-latitude = 52
-longitude = 6.2
-charging_price = 0.25  # €/kWh
-charging_desirability = 1
-# An indicator (0-1) of how much people like to charge at this location
-percentage_in_location_at_run_start = 1
-# If filling it directly instead of computing it (controlled by
-# compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 350 # kW
-proportion_of_discharge_to_network = 0.9
-time_modulation_factors = [
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
-] # Starts at midinight
-[locations.bus_route_end]
-vehicle = 'bus'
-connectivity = 1
-charging_power = 350  # kW
+charging_power = 315  # kW
 charger_efficiency = 0.9
 latitude = 52
 longitude = 6.2
@@ -118,7 +98,27 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 1
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 350 # kW
+vehicle_discharge_power = 388.8888889 # kW
+proportion_of_discharge_to_network = 0.9
+time_modulation_factors = [
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+] # Starts at midinight
+[locations.bus_route_end]
+vehicle = 'bus'
+connectivity = 1
+charging_power = 315  # kW
+charger_efficiency = 0.9
+latitude = 52
+longitude = 6.2
+charging_price = 0.25  # €/kWh
+charging_desirability = 1
+# An indicator (0-1) of how much people like to charge at this location
+percentage_in_location_at_run_start = 1
+# If filling it directly instead of computing it (controlled by
+# compute_start_location_split in mobility_module below)
+vehicle_discharge_power = 388.8888889 # kW
 proportion_of_discharge_to_network = 0.9
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,

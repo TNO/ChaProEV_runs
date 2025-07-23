@@ -1,5 +1,4 @@
 import datetime
-import typing as ty
 
 import numpy as np
 import pandas as pd
@@ -36,17 +35,12 @@ def test_charge_and_consumption() -> None:
     test_range: pd.DatetimeIndex = pd.date_range(
         start=test_start_date, end=test_end_date, freq='1h', inclusive='both'
     )
-    test_scenarios: ty.List[str] = [
-        'XX_bus',
-        'XX_van',
-        'XX_truck',
-        'XX_car'
-    ]
+    test_scenarios: list[str] = ['XX_bus', 'XX_van', 'XX_truck', 'XX_car']
     for scenario in test_scenarios:
         charge_drawn_by_vehicles_dataframe: pd.DataFrame = pd.read_pickle(
             f'output/{case_name}/{scenario}_charge_drawn_by_vehicles_total.pkl'
         )
-        
+
         charge_drawn_by_vehicles_dataframe_in_test = (
             charge_drawn_by_vehicles_dataframe.loc[test_range]
         )

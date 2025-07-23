@@ -68,7 +68,7 @@ download_EV_tool_data = false
 [locations.home]
 vehicle = 'car'
 connectivity = 1
-charging_power = 16.5  # kW
+charging_power = 14.025 # kW
 charger_efficiency = 0.85
 latitude = 52
 longitude = 6.2
@@ -78,7 +78,7 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 1
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 16.5 # kW
+vehicle_discharge_power = 19.41176471 # kW
 proportion_of_discharge_to_network = 0.85
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -88,7 +88,7 @@ time_modulation_factors = [
 [locations.work]
 vehicle = 'car'
 connectivity = 0.25
-charging_power = 16.5  # kW
+charging_power = 14.025 # kW
 charger_efficiency = 0.85
 latitude = 52.1
 longitude = 5.8
@@ -98,7 +98,7 @@ charging_desirability = 1
 percentage_in_location_at_run_start = 0
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 16.5 # kW
+vehicle_discharge_power = 19.41176471 # kW
 proportion_of_discharge_to_network = 0.85
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -108,7 +108,7 @@ time_modulation_factors = [
 [locations.leisure]
 vehicle = 'car'
 connectivity = 0.25
-charging_power = 22  # kW
+charging_power = 14.025 # kW
 charger_efficiency = 0.85
 latitude = 52.1
 longitude = 6.2
@@ -118,8 +118,8 @@ charging_desirability = 0.25
 percentage_in_location_at_run_start = 0
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 0 # kW
-proportion_of_discharge_to_network = 0.9
+vehicle_discharge_power = 19.41176471 # kW
+proportion_of_discharge_to_network = 0.85
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -128,7 +128,7 @@ time_modulation_factors = [
 [locations.weekend]
 vehicle = 'car'
 connectivity = 0.125
-charging_power = 22  # kW
+charging_power = 14.025 # kW
 charger_efficiency = 0.85
 latitude = 51.8
 longitude = 6.2
@@ -138,8 +138,8 @@ charging_desirability = 0.1
 percentage_in_location_at_run_start = 0
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 0 # kW
-proportion_of_discharge_to_network = 0.9
+vehicle_discharge_power = 19.41176471 # kW
+proportion_of_discharge_to_network = 0.85
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1,
@@ -148,7 +148,7 @@ time_modulation_factors = [
 [locations.holiday]
 vehicle = 'car'
 connectivity = 1
-charging_power = 22  # kW
+charging_power = 14.025 # kW
 charger_efficiency = 0.85
 latitude = 53.0
 longitude = 6.2
@@ -158,8 +158,8 @@ charging_desirability = 0.2
 percentage_in_location_at_run_start = 0
 # If filling it directly instead of computing it (controlled by
 # compute_start_location_split in mobility_module below)
-vehicle_discharge_power = 11 # kW
-proportion_of_discharge_to_network = 0.9
+vehicle_discharge_power = 19.41176471 # kW
+proportion_of_discharge_to_network = 0.85
 time_modulation_factors = [
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1,

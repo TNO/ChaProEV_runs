@@ -1,56 +1,6 @@
 [run]
 use_day_types_in_charge_computing = true
 
-[vehicle]
-name = "bus"
-base_location = "bus_depot"
-yearly_kilometrage = 90000
-kilometers_column_for_consumption = "Arrivals"
-use_weighted = false
-battery_capacity = 500
-solar_panel_size_kWp = 0
-
-[mobility_module]
-day_start_hour = 4.0
-compute_start_location_split = true
-day_types = [ "weekday_in_work_week", "weekend_in_work_week", "weekday_in_holiday_week", "weekend_in_holiday_week", "weekend_holiday_departures", "weekend_holiday_returns", "holiday_overlap_weekend",]
-mobility_quantities = [ "Departures amount", "Departures kilometers", "Departures weighted kilometers", "Departures impact", "Departures impact kilometers", "Departures impact weighted kilometers", "Arrivals amount", "Arrivals kilometers", "Arrivals weighted kilometers", "Arrivals impact", "Arrivals impact kilometers", "Arrivals impact weighted kilometers",]
-battery_space_shift_quantities = [ "departures", "departures_weighted", "departures_impact", "departures_impact_weighted", "arrivals", "arrivals_weighted", "arrivals_impact", "arrivals_impact_weighted",]
-location_connections_headers = [ "Duration (hours)", "Distance (km)", "Weighted distance (km)",]
-mobility_index_names = [ "From", "To", "Time Tag",]
-kilometers_driven_headers = [ "Proportion at base", "Proportion idle en route", "Proportion driving", "Proportion of run time driving", "Driven kilometers (km)",]
-holiday_weeks = [ 1, 8, 18, 28, 29, 30, 31, 32, 33, 42, 51, 52, 53,]
-number_of_holiday_weeks = 10
-holiday_departures_in_weekend_week_numbers = [ 7, 17, 27, 30, 41, 50,]
-holiday_returns_in_weekend_week_numbers = [ 1, 8, 18, 30, 33, 42,]
-work_hours_in_a_work_day = 8
-hours_worked_per_work_week = 31
-hours_in_a_standard_work_week = 40
-percentage_working_on_a_work_week = 1
-worked_hours_per_year = 1434
-leisure_trips_per_weekend = 1
-leisure_trips_per_week_outside_weekends = 2
-maximal_fill_percentage_leisure_trips_on_non_work_weekdays = 1
-weekday_leisure_trips = 2
-percentage_of_weekday_leisure_trips_on_a_work_day = 0.5
-weekend_trips_per_year = 12
-holiday_trips_taken = 1
-time_spent_at_holiday_destination = 14
-
-[transport_factors]
-road_types = [ "highway", "city",]
-weights = [ 0.66, 1.6,]
-
-[weather]
-weather_factors_table_root_name = "weather_factors"
-
-[charging]
-price_reaction_exponent = 0
-desirability_reaction_exponent = 0
-
-[charging_sessions]
-resolution = 1
-
 [run.start]
 year = 2017
 month = 12
@@ -95,68 +45,292 @@ download_EV_tool_data = false
 [locations.bus_depot]
 vehicle = "bus"
 connectivity = 1
-charging_power = 350
+charging_power = 315
 charger_efficiency = 0.94
 latitude = 52
 longitude = 6.2
 charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
-vehicle_discharge_power = 350
+vehicle_discharge_power = 388.8888889
 proportion_of_discharge_to_network = 0.94
-time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
+time_modulation_factors = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+]
 
 [locations.bus_route_start]
 vehicle = "bus"
 connectivity = 1
-charging_power = 350
+charging_power = 315
 charger_efficiency = 0.94
 latitude = 52
 longitude = 6.2
 charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
-vehicle_discharge_power = 350
+vehicle_discharge_power = 388.8888889
 proportion_of_discharge_to_network = 0.94
-time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
+time_modulation_factors = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+]
 
 [locations.bus_route_end]
 vehicle = "bus"
 connectivity = 1
-charging_power = 350
+charging_power = 315
 charger_efficiency = 0.94
 latitude = 52
 longitude = 6.2
 charging_price = 0.25
 charging_desirability = 1
 percentage_in_location_at_run_start = 1
-vehicle_discharge_power = 350
+vehicle_discharge_power = 388.8888889
 proportion_of_discharge_to_network = 0.94
-time_modulation_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
+time_modulation_factors = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+]
 
 [legs.bus_from_depot_to_route_start]
 vehicle = "bus"
 distance = 3.555555556
 duration = 0.088888889
-hour_in_day_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1.2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
+hour_in_day_factors = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1.2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+]
+
+[legs.bus_from_depot_to_route_start.locations]
+start = "bus_depot"
+end = "bus_route_start"
+
+[legs.bus_from_depot_to_route_start.road_type_mix]
+mix = [
+    0.8,
+    0.2,
+]
 
 [legs.bus_from_route_start_to_depot]
 vehicle = "bus"
 distance = 3.555555556
 duration = 0.088888889
-hour_in_day_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1.2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
+hour_in_day_factors = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1.2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+]
+
+[legs.bus_from_route_start_to_depot.locations]
+start = "bus_route_start"
+end = "bus_depot"
+
+[legs.bus_from_route_start_to_depot.road_type_mix]
+mix = [
+    0.8,
+    0.2,
+]
 
 [legs.bus_from_route_start_to_route_end]
 vehicle = "bus"
 distance = 9.777777778
 duration = 0.586666667
-hour_in_day_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1.2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
+hour_in_day_factors = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1.2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+]
+
+[legs.bus_from_route_start_to_route_end.locations]
+start = "bus_route_start"
+end = "bus_route_end"
+
+[legs.bus_from_route_start_to_route_end.road_type_mix]
+mix = [
+    0.8,
+    0.2,
+]
 
 [legs.bus_from_route_end_to_route_start]
 vehicle = "bus"
 distance = 9.777777778
 duration = 0.586666667
-hour_in_day_factors = [ 1, 1, 1, 1, 1, 1, 1, 1, 1.2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
+hour_in_day_factors = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1.2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+]
+
+[legs.bus_from_route_end_to_route_start.locations]
+start = "bus_route_end"
+end = "bus_route_start"
+
+[legs.bus_from_route_end_to_route_start.road_type_mix]
+mix = [
+    0.8,
+    0.2,
+]
+
+[vehicle]
+name = "bus"
+base_location = "bus_depot"
+yearly_kilometrage = 90000
+kilometers_column_for_consumption = "Arrivals"
+use_weighted = false
+battery_capacity = 500
+solar_panel_size_kWp = 0
 
 [vehicle.base_consumption_per_km]
 electricity_kWh = 0.76
@@ -168,53 +342,358 @@ LNG_kg = 0.2415
 
 [trips.bus_weekday_in_workweek]
 vehicle = "bus"
-legs = [ "bus_from_depot_to_route_start", "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start", "bus_from_route_start_to_depot",]
-time_between_legs = [ 0, 0.1, 0,]
+legs = [
+    "bus_from_depot_to_route_start",
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+    "bus_from_route_start_to_depot",
+]
+time_between_legs = [
+    0,
+    0.1,
+    0,
+]
 percentage_station_users = 0
-start_probabilities = [ 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]
-repeated_sequence = [ "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start",]
-repetition_amounts = [ 9,]
-time_between_repetitions = [ 0.1,]
+start_probabilities = [
+    0,
+    0.5,
+    0.5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+]
+repeated_sequence = [
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+]
+repetition_amounts = [
+    9,
+]
+time_between_repetitions = [
+    0.1,
+]
 
 [trips.bus_weekend_in_workweek]
 vehicle = "bus"
-legs = [ "bus_from_depot_to_route_start", "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start", "bus_from_route_start_to_depot",]
-time_between_legs = [ 0, 0.1, 0,]
+legs = [
+    "bus_from_depot_to_route_start",
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+    "bus_from_route_start_to_depot",
+]
+time_between_legs = [
+    0,
+    0.1,
+    0,
+]
 percentage_station_users = 0
-start_probabilities = [ 0, 0.25, 0.5, 0.25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]
-repeated_sequence = [ "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start",]
-repetition_amounts = [ 7,]
-time_between_repetitions = [ 0.1,]
+start_probabilities = [
+    0,
+    0.25,
+    0.5,
+    0.25,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+]
+repeated_sequence = [
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+]
+repetition_amounts = [
+    7,
+]
+time_between_repetitions = [
+    0.1,
+]
 
 [trips.bus_weekday_in_holiday_week]
 vehicle = "bus"
-legs = [ "bus_from_depot_to_route_start", "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start", "bus_from_route_start_to_depot",]
-time_between_legs = [ 0, 0.1, 0,]
+legs = [
+    "bus_from_depot_to_route_start",
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+    "bus_from_route_start_to_depot",
+]
+time_between_legs = [
+    0,
+    0.1,
+    0,
+]
 percentage_station_users = 0
-start_probabilities = [ 0, 0.25, 0.75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]
-repeated_sequence = [ "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start",]
-repetition_amounts = [ 8,]
-time_between_repetitions = [ 0.1,]
+start_probabilities = [
+    0,
+    0.25,
+    0.75,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+]
+repeated_sequence = [
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+]
+repetition_amounts = [
+    8,
+]
+time_between_repetitions = [
+    0.1,
+]
 
 [trips.bus_weekend_in_holiday_week]
 vehicle = "bus"
-legs = [ "bus_from_depot_to_route_start", "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start", "bus_from_route_start_to_depot",]
-time_between_legs = [ 0, 0.1, 0,]
+legs = [
+    "bus_from_depot_to_route_start",
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+    "bus_from_route_start_to_depot",
+]
+time_between_legs = [
+    0,
+    0.1,
+    0,
+]
 percentage_station_users = 0
-start_probabilities = [ 0, 0.25, 0.5, 0.25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]
-repeated_sequence = [ "bus_from_route_start_to_route_end", "bus_from_route_end_to_route_start",]
-repetition_amounts = [ 7,]
-time_between_repetitions = [ 0.1,]
+start_probabilities = [
+    0,
+    0.25,
+    0.5,
+    0.25,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+]
+repeated_sequence = [
+    "bus_from_route_start_to_route_end",
+    "bus_from_route_end_to_route_start",
+]
+repetition_amounts = [
+    7,
+]
+time_between_repetitions = [
+    0.1,
+]
+
+[mobility_module]
+day_start_hour = 4.0
+compute_start_location_split = true
+day_types = [
+    "weekday_in_work_week",
+    "weekend_in_work_week",
+    "weekday_in_holiday_week",
+    "weekend_in_holiday_week",
+    "weekend_holiday_departures",
+    "weekend_holiday_returns",
+    "holiday_overlap_weekend",
+]
+mobility_quantities = [
+    "Departures amount",
+    "Departures kilometers",
+    "Departures weighted kilometers",
+    "Departures impact",
+    "Departures impact kilometers",
+    "Departures impact weighted kilometers",
+    "Arrivals amount",
+    "Arrivals kilometers",
+    "Arrivals weighted kilometers",
+    "Arrivals impact",
+    "Arrivals impact kilometers",
+    "Arrivals impact weighted kilometers",
+]
+battery_space_shift_quantities = [
+    "departures",
+    "departures_weighted",
+    "departures_impact",
+    "departures_impact_weighted",
+    "arrivals",
+    "arrivals_weighted",
+    "arrivals_impact",
+    "arrivals_impact_weighted",
+]
+location_connections_headers = [
+    "Duration (hours)",
+    "Distance (km)",
+    "Weighted distance (km)",
+]
+mobility_index_names = [
+    "From",
+    "To",
+    "Time Tag",
+]
+kilometers_driven_headers = [
+    "Proportion at base",
+    "Proportion idle en route",
+    "Proportion driving",
+    "Proportion of run time driving",
+    "Driven kilometers (km)",
+]
+holiday_weeks = [
+    1,
+    8,
+    18,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    42,
+    51,
+    52,
+    53,
+]
+number_of_holiday_weeks = 10
+holiday_departures_in_weekend_week_numbers = [
+    7,
+    17,
+    27,
+    30,
+    41,
+    50,
+]
+holiday_returns_in_weekend_week_numbers = [
+    1,
+    8,
+    18,
+    30,
+    33,
+    42,
+]
+work_hours_in_a_work_day = 8
+hours_worked_per_work_week = 31
+hours_in_a_standard_work_week = 40
+percentage_working_on_a_work_week = 1
+worked_hours_per_year = 1434
+leisure_trips_per_weekend = 1
+leisure_trips_per_week_outside_weekends = 2
+maximal_fill_percentage_leisure_trips_on_non_work_weekdays = 1
+weekday_leisure_trips = 2
+percentage_of_weekday_leisure_trips_on_a_work_day = 0.5
+weekend_trips_per_year = 12
+holiday_trips_taken = 1
+time_spent_at_holiday_destination = 14
 
 [mobility_module.trips_per_day_type]
-bus = [ "bus_weekday_in_workweek", "bus_weekend_in_workweek", "bus_weekday_in_holiday_week", "bus_weekend_in_holiday_week", "bus_weekend_in_holiday_week", "bus_weekend_in_holiday_week", "bus_weekend_in_holiday_week",]
-truck = [ "truck_weekday", "truck_weekend", "truck_weekday", "truck_weekend", "truck_weekend", "truck_weekend", "truck_weekend",]
-van = [ "van_weekday", "van_weekend", "van_weekday", "van_weekend", "van_weekend", "van_weekend", "van_weekend",]
+bus = [
+    "bus_weekday_in_workweek",
+    "bus_weekend_in_workweek",
+    "bus_weekday_in_holiday_week",
+    "bus_weekend_in_holiday_week",
+    "bus_weekend_in_holiday_week",
+    "bus_weekend_in_holiday_week",
+    "bus_weekend_in_holiday_week",
+]
+truck = [
+    "truck_weekday",
+    "truck_weekend",
+    "truck_weekday",
+    "truck_weekend",
+    "truck_weekend",
+    "truck_weekend",
+    "truck_weekend",
+]
+van = [
+    "van_weekday",
+    "van_weekend",
+    "van_weekday",
+    "van_weekend",
+    "van_weekend",
+    "van_weekend",
+    "van_weekend",
+]
+
+[transport_factors]
+road_types = [
+    "highway",
+    "city",
+]
+weights = [
+    0.66,
+    1.6,
+]
+
+[weather]
+weather_factors_table_root_name = "weather_factors"
 
 [weather.source_data]
 start_year = 2020
 end_year = 2022
-quantities = [ "2m_temperature", "skin_temperature", "surface_solar_radiation_downwards", "total_precipitation",]
+quantities = [
+    "2m_temperature",
+    "skin_temperature",
+    "surface_solar_radiation_downwards",
+    "total_precipitation",
+]
 raw_data_folder = "input/cds_weather_data"
 latitude_min = 36
 latitude_max = 68
@@ -226,15 +705,46 @@ raw_data_folder = "input/cds_weather_data"
 processed_folder = "input/processed_weather_data"
 weather_database_file_name = "weather.sqlite3"
 chunk_size = 100000
-quantities = [ "2m_temperature", "skin_temperature", "surface_solar_radiation_downwards", "total_precipitation",]
+quantities = [
+    "2m_temperature",
+    "skin_temperature",
+    "surface_solar_radiation_downwards",
+    "total_precipitation",
+]
 KELVIN_TO_CELSIUS = -273.15
-quantity_tags = [ "t2m", "skt", "ssrd", "tp",]
-quantity_processed_names = [ "Temperature at 2 meters (°C)", "Skin temperature (°C)", "Surface solar radiation downwards (J/m2)", "Total precipitation (m)",]
-cumulative_quantity_processed_names = [ "Surface solar radiation downwards (J/m2)", "Total precipitation (m)",]
-cumulative_quantities = [ "surface_solar_radiation_downwards", "total_precipitation",]
-queries_for_cumulative_quantities = [ "SELECT * FROM 'Surface solar radiation downwards (J/m2)';", "SELECT * FROM 'Total precipitation (m)';",]
-temperature_quantities = [ "2m_temperature", "skin_temperature",]
-processed_index_tags = [ "Timetag", "Latitude", "Longitude",]
+quantity_tags = [
+    "t2m",
+    "skt",
+    "ssrd",
+    "tp",
+]
+quantity_processed_names = [
+    "Temperature at 2 meters (°C)",
+    "Skin temperature (°C)",
+    "Surface solar radiation downwards (J/m2)",
+    "Total precipitation (m)",
+]
+cumulative_quantity_processed_names = [
+    "Surface solar radiation downwards (J/m2)",
+    "Total precipitation (m)",
+]
+cumulative_quantities = [
+    "surface_solar_radiation_downwards",
+    "total_precipitation",
+]
+queries_for_cumulative_quantities = [
+    "SELECT * FROM 'Surface solar radiation downwards (J/m2)';",
+    "SELECT * FROM 'Total precipitation (m)';",
+]
+temperature_quantities = [
+    "2m_temperature",
+    "skin_temperature",
+]
+processed_index_tags = [
+    "Timetag",
+    "Latitude",
+    "Longitude",
+]
 latitude_min = 50.6
 latitude_max = 53.5
 longitude_min = 3.4
@@ -256,30 +766,9 @@ folder = "input"
 file_name = "vehicle_temperature_efficiencies.pkl"
 fitting_polynomial_order = 6
 
-[legs.bus_from_depot_to_route_start.locations]
-start = "bus_depot"
-end = "bus_route_start"
+[charging]
+price_reaction_exponent = 0
+desirability_reaction_exponent = 0
 
-[legs.bus_from_depot_to_route_start.road_type_mix]
-mix = [ 0.8, 0.2,]
-
-[legs.bus_from_route_start_to_depot.locations]
-start = "bus_route_start"
-end = "bus_depot"
-
-[legs.bus_from_route_start_to_depot.road_type_mix]
-mix = [ 0.8, 0.2,]
-
-[legs.bus_from_route_start_to_route_end.locations]
-start = "bus_route_start"
-end = "bus_route_end"
-
-[legs.bus_from_route_start_to_route_end.road_type_mix]
-mix = [ 0.8, 0.2,]
-
-[legs.bus_from_route_end_to_route_start.locations]
-start = "bus_route_end"
-end = "bus_route_start"
-
-[legs.bus_from_route_end_to_route_start.road_type_mix]
-mix = [ 0.8, 0.2,]
+[charging_sessions]
+resolution = 1

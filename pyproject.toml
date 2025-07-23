@@ -3,7 +3,7 @@ requires = ['setuptools', 'setuptools-scm']
 build-backend = 'setuptools.build_meta'
 
 [project]
-name = 'ChaProEV runs'
+name = 'ChaProEV_runs'
 version = '0.0.1'
 authors = [
   { name='Omar Usmani', email='Omar.Usmani@TNO.nl' },
