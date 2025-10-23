@@ -145,7 +145,7 @@ feather = false
 parquet = false
 stata = false
 pickle = true
-sql = true
+sql = false
 
 [maps]
 map_data_folder = 'input/map_data'
