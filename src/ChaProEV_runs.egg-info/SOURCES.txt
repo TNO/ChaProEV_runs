@@ -1211,8 +1211,14 @@ tests/test_empty_values.py
 tests/test_enough_power_next_leg.py
 tests/test_same_output.py
 tests/__pycache__/test_battery_space.cpython-313-pytest-8.3.3.pyc
+tests/__pycache__/test_battery_space.cpython-313-pytest-8.4.2.pyc
 tests/__pycache__/test_charge_and_consumption.cpython-313-pytest-8.3.3.pyc
+tests/__pycache__/test_charge_and_consumption.cpython-313-pytest-8.4.2.pyc
 tests/__pycache__/test_empty_values.cpython-313-pytest-8.3.3.pyc
+tests/__pycache__/test_empty_values.cpython-313-pytest-8.4.2.pyc
+tests/__pycache__/test_enough_power_for_next_leg.cpython-313-pytest-8.4.2.pyc
+tests/__pycache__/test_enough_power_next_leg.cpython-313-pytest-8.4.2.pyc
+tests/__pycache__/test_same_output.cpython-313-pytest-8.4.2.pyc
 variants/Mopo/XX_bus.csv
 variants/Mopo/XX_car_own_driveway.csv
 variants/Mopo/XX_car_street_parking.csv
